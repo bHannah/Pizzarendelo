@@ -2,14 +2,11 @@ package pizzarendelo;
 
 import javax.swing.JOptionPane;
 
-
 public class Pizzarendelo extends javax.swing.JFrame {
-
 
     public Pizzarendelo() {
         initComponents();
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -66,7 +63,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         fizetesimod = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        fizetes = new javax.swing.JComboBox<>();
         kep = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         megse = new javax.swing.JButton();
@@ -481,8 +478,8 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel5.setText("Válassz fizetési módot:");
 
-        jComboBox1.setBackground(new java.awt.Color(255, 204, 204));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Válassz fizetési módot", "Kézpénz", "Bankkártya", "SZÉP-kártya" }));
+        fizetes.setBackground(new java.awt.Color(255, 204, 204));
+        fizetes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Válassz fizetési módot", "Készpénz", "Bankkártya", "SZÉP-kártya" }));
 
         javax.swing.GroupLayout fizetesimodLayout = new javax.swing.GroupLayout(fizetesimod);
         fizetesimod.setLayout(fizetesimodLayout);
@@ -491,7 +488,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
             .addGroup(fizetesimodLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(fizetesimodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, 0, 220, Short.MAX_VALUE)
+                    .addComponent(fizetes, 0, 220, Short.MAX_VALUE)
                     .addGroup(fizetesimodLayout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -503,7 +500,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fizetes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -667,68 +664,92 @@ public class Pizzarendelo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void p32esActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p32esActionPerformed
-        
+
     }//GEN-LAST:event_p32esActionPerformed
 
     private void p55osActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p55osActionPerformed
-        
+
     }//GEN-LAST:event_p55osActionPerformed
 
     private void bologneseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bologneseActionPerformed
-       
+
     }//GEN-LAST:event_bologneseActionPerformed
 
     private void megrendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_megrendelesActionPerformed
-boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelected() == false &&
-        bolognese.isSelected() == false && carbonara.isSelected() == false && sonkas.isSelected() == false;  
-    String uzenet, cim = "FIGYELEM! ";
-    int ikonTipus;
-    if(nincsPizzaValasztva){
+        boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelected() == false
+                && bolognese.isSelected() == false && carbonara.isSelected() == false && sonkas.isSelected() == false;
+        String uzenet, cim = "FIGYELEM! ";
+        int ikonTipus;
+        if (nincsPizzaValasztva) {
             cim += "Hiányos rendelés!";
             uzenet = "Nincs Pizzafajta választva";
             ikonTipus = 0;
-        }else{
+        } else {
             cim += "Sikeres Megrendelés!";
             uzenet = "Sikeres megrendelés!:)";
             ikonTipus = 1;
         }
-    JOptionPane.showMessageDialog(null, uzenet, cim, ikonTipus);
+        JOptionPane.showMessageDialog(null, uzenet, cim, ikonTipus);
     }//GEN-LAST:event_megrendelesActionPerformed
 
     private void megseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_megseActionPerformed
-        
+
         JOptionPane.showMessageDialog(null, "Sajnáljuk, hogy nem minket választottál!");
     }//GEN-LAST:event_megseActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     
-        int darab = (int)darabszam.getValue();
+
+        int darab = (int) darabszam.getValue();
         int osszeg = 0;
         int p24 = 1600;
         int p32 = 2400;
         int p55 = 3600;
-        
-        if (Margherita.isSelected() == false && hawaii.isSelected() == false &&
-        bolognese.isSelected() == false && carbonara.isSelected() == false && sonkas.isSelected() == false){
+
+        if (Margherita.isSelected() == false && hawaii.isSelected() == false
+                && bolognese.isSelected() == false && carbonara.isSelected() == false && sonkas.isSelected() == false) {
             osszeg += 0;
-        }else if
-          (p24es.isSelected()) {
-        osszeg += p24;
-        }   
-        else if (p32es.isSelected()){ 
-        osszeg += p32;
-        }else if (p55os.isSelected()) {
-        osszeg += p55;
+        } else if (p24es.isSelected()) {
+            osszeg += p24;
+        } else if (p32es.isSelected()) {
+            osszeg += p32;
+        } else if (p55os.isSelected()) {
+            osszeg += p55;
         }
-        JOptionPane.showMessageDialog(null, "A kiválasztott pizza ára: " + (osszeg * darab), "Gratulálunk", 1);
+        int fizmod = fizetes.getSelectedIndex();
+        String fizetes = "";
+        String uzenet = "";
+        String title ="";
+        if (fizmod == 0) {
+            title = "Hiba!";
+            uzenet = "Nincs kiválasztott fizetési mód"; 
+        } else {
+            if (fizmod == 1) {
+                title = "Gratulálunk!";
+                fizetes = "Készpénz";
+                uzenet = "A kiválasztott pizza ára: " + (osszeg * darab) + "\n" + "Fizetési mód: " + fizetes;
+            }
+            else if (fizmod == 2) {
+                title = "Gratulálunk!";
+                fizetes = "Bankkártya";
+                uzenet = "A kiválasztott pizza ára: " + (osszeg * darab) + "\n" + "Fizetési mód: " + fizetes;
+            }
+            else if (fizmod == 3) {
+                title = "Gratulálunk!";
+                fizetes = "SZÉP-kártya";
+                uzenet = "A kiválasztott pizza ára: " + (osszeg * darab) + "\n" + "Fizetési mód: " + fizetes;
+            }
+        }
+        
+        JOptionPane.showMessageDialog(null, uzenet, title, 1);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
-        
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Pizzarendelo().setVisible(true);
@@ -747,6 +768,7 @@ boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelec
     private javax.swing.JLabel cimszoveg;
     private javax.swing.JSpinner darabszam;
     private javax.swing.JPanel egyebfeltet;
+    private javax.swing.JComboBox<String> fizetes;
     private javax.swing.JPanel fizetesimod;
     private javax.swing.JPanel hatter;
     private javax.swing.JRadioButton hawaii;
@@ -757,7 +779,6 @@ boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelec
     private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
