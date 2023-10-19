@@ -617,7 +617,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
 
     private void megrendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_megrendelesActionPerformed
 
-        JOptionPane.showMessageDialog(null, "tesztverzió");
+        JOptionPane.showMessageDialog(null, "Sikeres megrendelés!");
         
     }//GEN-LAST:event_megrendelesActionPerformed
 
@@ -627,7 +627,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
     }//GEN-LAST:event_megseActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        :
+        
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     public static void main(String args[]) {
