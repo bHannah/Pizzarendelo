@@ -296,7 +296,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
 
         jLabel18.setText("2400 ft");
 
-        jLabel19.setText("3600ft");
+        jLabel19.setText("3600 ft");
 
         javax.swing.GroupLayout reklamLayout = new javax.swing.GroupLayout(reklam);
         reklam.setLayout(reklamLayout);
@@ -712,9 +712,13 @@ boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelec
         int p32 = 2400;
         int p55 = 3600;
         
-        if (p24es.isSelected()) {
+        if (Margherita.isSelected() == false && hawaii.isSelected() == false &&
+        bolognese.isSelected() == false && carbonara.isSelected() == false && sonkas.isSelected() == false){
+            osszeg += 0;
+        }else if
+          (p24es.isSelected()) {
         osszeg += p24;
-        }
+        }   
         else if (p32es.isSelected()){ 
         osszeg += p32;
         }else if (p55os.isSelected()) {
