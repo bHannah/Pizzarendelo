@@ -680,11 +680,17 @@ public class Pizzarendelo extends javax.swing.JFrame {
                 && bolognese.isSelected() == false && carbonara.isSelected() == false && sonkas.isSelected() == false;
         String uzenet, cim = "FIGYELEM! ";
         int ikonTipus;
+        int fizmod = fizetes.getSelectedIndex();
         if (nincsPizzaValasztva) {
             cim += "Hiányos rendelés!";
             uzenet = "Nincs Pizzafajta választva";
             ikonTipus = 0;
-        } else {
+        } else if (fizmod == 0){
+            cim += "Hiányos rendelés";
+            uzenet = "Nincs kiválasztott fizetési mód!";
+            ikonTipus = 0;
+        }
+        else{
             cim += "Sikeres Megrendelés!";
             uzenet = "Sikeres megrendelés!:)";
             ikonTipus = 1;
