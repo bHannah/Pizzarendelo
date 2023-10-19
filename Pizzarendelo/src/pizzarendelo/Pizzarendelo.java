@@ -818,6 +818,13 @@ public class Pizzarendelo extends javax.swing.JFrame {
         };
         
         String megjegyzes = megj.getText();
+        String pizza = "";
+        if (darab > 1){
+            pizza = "pizzák";
+        };
+        if (darab == 1) {
+            pizza = "pizza";
+        };
         
         String fizetes = "";
         String uzenet = "";
@@ -829,17 +836,17 @@ public class Pizzarendelo extends javax.swing.JFrame {
             if (fizmod == 1) {
                 title = "Gratulálunk!";
                 fizetes = "Készpénz";
-                uzenet = "A rendelésed: " + "\n" + darab +"db "+ fajta + "\n" + "Méret: " + meret + "\n" +  "Tészta:" + teszta + "\n" + "Extra:" + extra + "\n" +"A kiválasztott pizza ára: " + (osszeg * darab) + " ft" + "\n" + "Fizetési mód: " + fizetes + "\n" + "Megjegyzésed: " + megjegyzes;
+                uzenet = "A rendelésed: " + "\n" + darab +"db "+ fajta + "\n" + "Méret: " + meret + "\n" +  "Tészta:" + teszta + "\n" + "Extra:" + extra + "\n" + "A kiválasztott " + pizza + " ára: " + (osszeg * darab) + " ft" + "\n" + "Fizetési mód: " + fizetes + "\n" + "Megjegyzésed: " + megjegyzes;
             }
             else if (fizmod == 2) {
                 title = "Gratulálunk!";
                 fizetes = "Bankkártya";
-                uzenet =  "A rendelésed: " + "\n" + darab +"db "+ fajta + "\n" + "Méret: " + meret + "\n" + "Tészta:" + teszta +  "\n" + "Extra:" + extra + "\n"+"A kiválasztott pizza ára: " + (osszeg * darab) +  " ft" +"\n" + "Fizetési mód: " + fizetes + "\n" + "Megjegyzésed: " + megjegyzes;
+                uzenet =  "A rendelésed: " + "\n" + darab +"db "+ fajta + "\n" + "Méret: " + meret + "\n" + "Tészta:" + teszta +  "\n" + "Extra:" + extra + "\n" + "A kiválasztott " + pizza + " ára: " + (osszeg * darab) +  " ft" +"\n" + "Fizetési mód: " + fizetes + "\n" + "Megjegyzésed: " + megjegyzes;
             }
             else if (fizmod == 3) {
                 title = "Gratulálunk!";
                 fizetes = "SZÉP-kártya";
-                uzenet =  "A rendelésed: " + "\n" + darab +"db "+ fajta + "\n" + "Méret: " + meret + "\n" +  "Tészta:" + teszta +  "\n" + "Extra:" + extra + "\n" +"A kiválasztott pizza ára: " + (osszeg * darab) + " ft" + "\n" + "Fizetési mód: " + fizetes + "\n" + "Megjegyzésed: " + megjegyzes;
+                uzenet =  "A rendelésed: " + "\n" + darab +"db "+ fajta + "\n" + "Méret: " + meret + "\n" +  "Tészta:" + teszta +  "\n" + "Extra:" + extra + "\n" + "A kiválasztott " + pizza + " ára: " + (osszeg * darab) + " ft" + "\n" + "Fizetési mód: " + fizetes + "\n" + "Megjegyzésed: " + megjegyzes;
             }
         }
         
