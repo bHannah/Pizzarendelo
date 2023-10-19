@@ -46,11 +46,11 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         valasztek = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jRadioButton11 = new javax.swing.JRadioButton();
+        Margherita = new javax.swing.JRadioButton();
+        hawaii = new javax.swing.JRadioButton();
+        bolognese = new javax.swing.JRadioButton();
+        carbonara = new javax.swing.JRadioButton();
+        sonkas = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -306,25 +306,25 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel3.setText("Válogass pizzáink közül");
 
-        buttonGroup3.add(jRadioButton7);
-        jRadioButton7.setText("Margherita");
+        buttonGroup3.add(Margherita);
+        Margherita.setText("Margherita");
 
-        buttonGroup3.add(jRadioButton8);
-        jRadioButton8.setText("Hawaii");
+        buttonGroup3.add(hawaii);
+        hawaii.setText("Hawaii");
 
-        buttonGroup3.add(jRadioButton9);
-        jRadioButton9.setText("Bolognese");
-        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup3.add(bolognese);
+        bolognese.setText("Bolognese");
+        bolognese.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton9ActionPerformed(evt);
+                bologneseActionPerformed(evt);
             }
         });
 
-        buttonGroup3.add(jRadioButton10);
-        jRadioButton10.setText("Carbonara");
+        buttonGroup3.add(carbonara);
+        carbonara.setText("Carbonara");
 
-        buttonGroup3.add(jRadioButton11);
-        jRadioButton11.setText("Sonkás");
+        buttonGroup3.add(sonkas);
+        sonkas.setText("Sonkás");
 
         jLabel13.setText("(paradicsomszósz, paradicsomkarika, mozzarella)");
 
@@ -350,11 +350,11 @@ public class Pizzarendelo extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(valasztekLayout.createSequentialGroup()
                         .addGroup(valasztekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton7)
-                            .addComponent(jRadioButton8)
-                            .addComponent(jRadioButton9)
-                            .addComponent(jRadioButton10)
-                            .addComponent(jRadioButton11))
+                            .addComponent(Margherita)
+                            .addComponent(hawaii)
+                            .addComponent(bolognese)
+                            .addComponent(carbonara)
+                            .addComponent(sonkas))
                         .addGap(27, 27, 27)
                         .addGroup(valasztekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -371,23 +371,23 @@ public class Pizzarendelo extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addGroup(valasztekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton7)
+                    .addComponent(Margherita)
                     .addComponent(jLabel13))
                 .addGap(18, 18, 18)
                 .addGroup(valasztekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton8)
+                    .addComponent(hawaii)
                     .addComponent(jLabel14))
                 .addGap(18, 18, 18)
                 .addGroup(valasztekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton9)
+                    .addComponent(bolognese)
                     .addComponent(jLabel15))
                 .addGap(18, 18, 18)
                 .addGroup(valasztekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton10)
+                    .addComponent(carbonara)
                     .addComponent(jLabel16))
                 .addGap(18, 18, 18)
                 .addGroup(valasztekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton11)
+                    .addComponent(sonkas)
                     .addComponent(jLabel17))
                 .addContainerGap())
         );
@@ -611,24 +611,23 @@ public class Pizzarendelo extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jRadioButton6ActionPerformed
 
-    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+    private void bologneseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bologneseActionPerformed
        
-    }//GEN-LAST:event_jRadioButton9ActionPerformed
+    }//GEN-LAST:event_bologneseActionPerformed
 
     private void megrendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_megrendelesActionPerformed
-boolean vanPizzaValasztva = cmdPizza.getSelectedIndex() > 0;  
+boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelected() == false &&
+        bolognese.isSelected() == false && carbonara.isSelected() == false && sonkas.isSelected() == false;  
     String uzenet, cim = "FIGYELEM!";
     int ikonTipus;
-    if(vanPizzaValasztva){
-            cim += "Sikeres rendelés!";
-            uzenet = "Sikeres megrendelés!:)";
-            ikonTipus = 0;
-            //JOptionPane.showMessageDialog(null, "Nincs nyomtató telepítve!");
-        }else{
+    if(nincsPizzaValasztva){
             cim += "Hiányos rendelés!";
             uzenet = "Nincs Pizzafajta választva";
-            ikonTipus = 2;
-            //JOptionPane.showMessageDialog(null, "Nincs papírméret választva");
+            ikonTipus = 0;
+        }else{
+            cim += "Sikeres Megrendelés!";
+            uzenet = "Sikeres megrendelés!:)";
+            ikonTipus = 1;
         }
     JOptionPane.showMessageDialog(null, uzenet, cim, ikonTipus);
     }//GEN-LAST:event_megrendelesActionPerformed
@@ -652,14 +651,18 @@ boolean vanPizzaValasztva = cmdPizza.getSelectedIndex() > 0;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton Margherita;
+    private javax.swing.JRadioButton bolognese;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.JRadioButton carbonara;
     private javax.swing.JPanel cim;
     private javax.swing.JLabel cimszoveg;
     private javax.swing.JPanel egyebfeltet;
     private javax.swing.JPanel fizetesimod;
     private javax.swing.JPanel hatter;
+    private javax.swing.JRadioButton hawaii;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -685,16 +688,11 @@ boolean vanPizzaValasztva = cmdPizza.getSelectedIndex() > 0;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JPanel kep;
@@ -705,6 +703,7 @@ boolean vanPizzaValasztva = cmdPizza.getSelectedIndex() > 0;
     private javax.swing.JPanel pizzateszta;
     private javax.swing.JLabel pizzatesztaszoveg;
     private javax.swing.JPanel reklam;
+    private javax.swing.JRadioButton sonkas;
     private javax.swing.JPanel valasztek;
     // End of variables declaration//GEN-END:variables
 }

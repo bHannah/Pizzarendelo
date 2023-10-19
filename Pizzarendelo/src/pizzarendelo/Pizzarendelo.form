@@ -570,11 +570,11 @@
                           <Component id="jLabel3" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jRadioButton7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton10" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Margherita" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="hawaii" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bolognese" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="carbonara" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sonkas" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -597,27 +597,27 @@
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jRadioButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Margherita" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jRadioButton8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="hawaii" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jRadioButton9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bolognese" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jRadioButton10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="carbonara" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jRadioButton11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sonkas" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -634,7 +634,7 @@
                 <Property name="text" type="java.lang.String" value="V&#xe1;logass pizz&#xe1;ink k&#xf6;z&#xfc;l"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton7">
+            <Component class="javax.swing.JRadioButton" name="Margherita">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup3"/>
@@ -642,7 +642,7 @@
                 <Property name="text" type="java.lang.String" value="Margherita"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton8">
+            <Component class="javax.swing.JRadioButton" name="hawaii">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup3"/>
@@ -650,7 +650,7 @@
                 <Property name="text" type="java.lang.String" value="Hawaii"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton9">
+            <Component class="javax.swing.JRadioButton" name="bolognese">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup3"/>
@@ -658,10 +658,10 @@
                 <Property name="text" type="java.lang.String" value="Bolognese"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton9ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bologneseActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton10">
+            <Component class="javax.swing.JRadioButton" name="carbonara">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup3"/>
@@ -669,7 +669,7 @@
                 <Property name="text" type="java.lang.String" value="Carbonara"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton11">
+            <Component class="javax.swing.JRadioButton" name="sonkas">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup3"/>
