@@ -111,13 +111,16 @@ public class Pizzarendelo extends javax.swing.JFrame {
         pizzatesztaszoveg.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         pizzatesztaszoveg.setText("Válassz pizzatésztát");
 
+        jRadioButton1.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("Sima");
 
+        jRadioButton2.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Gluténmentes");
 
+        jRadioButton3.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("Teljeskiőrlésű");
 
@@ -154,9 +157,11 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel1.setText("Válassz méretet");
 
+        jRadioButton4.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup2.add(jRadioButton4);
         jRadioButton4.setText("24 cm");
 
+        jRadioButton5.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup2.add(jRadioButton5);
         jRadioButton5.setSelected(true);
         jRadioButton5.setText("32 cm");
@@ -166,6 +171,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton6.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup2.add(jRadioButton6);
         jRadioButton6.setText("55 cm");
         jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -207,16 +213,22 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel2.setText("Egyéb feltét hozzáadása");
 
+        jCheckBox1.setBackground(new java.awt.Color(255, 234, 234));
         jCheckBox1.setText("Sajt");
 
+        jCheckBox2.setBackground(new java.awt.Color(255, 234, 234));
         jCheckBox2.setText("Parmezán");
 
+        jCheckBox3.setBackground(new java.awt.Color(255, 234, 234));
         jCheckBox3.setText("Bacon");
 
+        jCheckBox4.setBackground(new java.awt.Color(255, 234, 234));
         jCheckBox4.setText("Olivabogyó");
 
+        jCheckBox5.setBackground(new java.awt.Color(255, 234, 234));
         jCheckBox5.setText("Kukorica");
 
+        jCheckBox6.setBackground(new java.awt.Color(255, 234, 234));
         jCheckBox6.setText("Jalapeno");
 
         javax.swing.GroupLayout egyebfeltetLayout = new javax.swing.GroupLayout(egyebfeltet);
@@ -306,12 +318,15 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel3.setText("Válogass pizzáink közül");
 
+        Margherita.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup3.add(Margherita);
         Margherita.setText("Margherita");
 
+        hawaii.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup3.add(hawaii);
         hawaii.setText("Hawaii");
 
+        bolognese.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup3.add(bolognese);
         bolognese.setText("Bolognese");
         bolognese.addActionListener(new java.awt.event.ActionListener() {
@@ -320,9 +335,11 @@ public class Pizzarendelo extends javax.swing.JFrame {
             }
         });
 
+        carbonara.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup3.add(carbonara);
         carbonara.setText("Carbonara");
 
+        sonkas.setBackground(new java.awt.Color(255, 234, 234));
         buttonGroup3.add(sonkas);
         sonkas.setText("Sonkás");
 
@@ -433,6 +450,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel5.setText("Válassz fizetési módot:");
 
+        jComboBox1.setBackground(new java.awt.Color(255, 204, 204));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Válassz fizetési módot", "Kézpénz", "Bankkártya", "SZÉP-kártya" }));
 
         javax.swing.GroupLayout fizetesimodLayout = new javax.swing.GroupLayout(fizetesimod);
@@ -502,6 +520,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel10.setText("Darabszám:");
 
+        jComboBox3.setBackground(new java.awt.Color(255, 204, 204));
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", " " }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
