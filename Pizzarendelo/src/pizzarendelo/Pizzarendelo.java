@@ -521,7 +521,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel10.setText("Darabszám:");
 
         jComboBox3.setBackground(new java.awt.Color(255, 204, 204));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", " " }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -637,7 +637,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
     private void megrendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_megrendelesActionPerformed
 boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelected() == false &&
         bolognese.isSelected() == false && carbonara.isSelected() == false && sonkas.isSelected() == false;  
-    String uzenet, cim = "FIGYELEM!";
+    String uzenet, cim = "FIGYELEM! ";
     int ikonTipus;
     if(nincsPizzaValasztva){
             cim += "Hiányos rendelés!";
