@@ -631,7 +631,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
     private void megrendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_megrendelesActionPerformed
         // TODO add your handling code here:
   
-        JOptionPane.showMessageDialog(null, "Sikeres megrendelés!");
+        JOptionPane.showMessageDialog(null, "tesztverzió");
         
     }//GEN-LAST:event_megrendelesActionPerformed
 
