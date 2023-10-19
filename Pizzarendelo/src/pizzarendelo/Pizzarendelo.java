@@ -19,6 +19,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
         jTextField2 = new javax.swing.JTextField();
+        jComboBox3 = new javax.swing.JComboBox<>();
         hatter = new javax.swing.JPanel();
         cim = new javax.swing.JPanel();
         cimszoveg = new javax.swing.JLabel();
@@ -29,9 +30,9 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jRadioButton3 = new javax.swing.JRadioButton();
         meret = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        p24es = new javax.swing.JRadioButton();
+        p32es = new javax.swing.JRadioButton();
+        p55os = new javax.swing.JRadioButton();
         egyebfeltet = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
@@ -41,9 +42,13 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jCheckBox5 = new javax.swing.JCheckBox();
         jCheckBox6 = new javax.swing.JCheckBox();
         reklam = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         valasztek = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         Margherita = new javax.swing.JRadioButton();
@@ -68,9 +73,13 @@ public class Pizzarendelo extends javax.swing.JFrame {
         megrendeles = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        darabszam = new javax.swing.JSpinner();
+        jButton1 = new javax.swing.JButton();
 
         jTextField2.setText("darabszám");
+
+        jComboBox3.setBackground(new java.awt.Color(255, 204, 204));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pizza Rendelés");
@@ -157,26 +166,26 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel1.setText("Válassz méretet");
 
-        jRadioButton4.setBackground(new java.awt.Color(255, 234, 234));
-        buttonGroup2.add(jRadioButton4);
-        jRadioButton4.setText("24 cm");
+        p24es.setBackground(new java.awt.Color(255, 234, 234));
+        buttonGroup2.add(p24es);
+        p24es.setText("24 cm");
 
-        jRadioButton5.setBackground(new java.awt.Color(255, 234, 234));
-        buttonGroup2.add(jRadioButton5);
-        jRadioButton5.setSelected(true);
-        jRadioButton5.setText("32 cm");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        p32es.setBackground(new java.awt.Color(255, 234, 234));
+        buttonGroup2.add(p32es);
+        p32es.setSelected(true);
+        p32es.setText("32 cm");
+        p32es.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                p32esActionPerformed(evt);
             }
         });
 
-        jRadioButton6.setBackground(new java.awt.Color(255, 234, 234));
-        buttonGroup2.add(jRadioButton6);
-        jRadioButton6.setText("55 cm");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        p55os.setBackground(new java.awt.Color(255, 234, 234));
+        buttonGroup2.add(p55os);
+        p55os.setText("55 cm");
+        p55os.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                p55osActionPerformed(evt);
             }
         });
 
@@ -188,9 +197,9 @@ public class Pizzarendelo extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(meretLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6))
+                    .addComponent(p24es)
+                    .addComponent(p32es)
+                    .addComponent(p55os))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         meretLayout.setVerticalGroup(
@@ -199,11 +208,11 @@ public class Pizzarendelo extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton4)
+                .addComponent(p24es)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton5)
+                .addComponent(p32es)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton6)
+                .addComponent(p55os)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -274,42 +283,64 @@ public class Pizzarendelo extends javax.swing.JFrame {
         reklam.setBackground(new java.awt.Color(255, 234, 234));
         reklam.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel6.setText("Válogass az igazán finom pizzáink közül");
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel11.setText("Árlista:");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel7.setText("Gyors kiszolgálás, mennyei ízek!");
+        jLabel6.setText("24 cm Pizza");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel8.setText("Ahogy te szereted!");
+        jLabel7.setText("32 cm Pizza");
+
+        jLabel8.setText("55 cm Pizza");
+
+        jLabel12.setText("1600  ft");
+
+        jLabel18.setText("2400 ft");
+
+        jLabel19.setText("3600ft");
 
         javax.swing.GroupLayout reklamLayout = new javax.swing.GroupLayout(reklam);
         reklam.setLayout(reklamLayout);
         reklamLayout.setHorizontalGroup(
             reklamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(reklamLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(reklamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, reklamLayout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, reklamLayout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, reklamLayout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67))))
+                    .addGroup(reklamLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(reklamLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(reklamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(reklamLayout.createSequentialGroup()
+                                .addGroup(reklamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8))
+                                .addGap(76, 76, 76)
+                                .addGroup(reklamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel18)
+                                    .addComponent(jLabel19)))
+                            .addGroup(reklamLayout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addGap(76, 76, 76)
+                                .addComponent(jLabel12)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         reklamLayout.setVerticalGroup(
             reklamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(reklamLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(reklamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel12))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel7)
+                .addGroup(reklamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel18))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addGap(34, 34, 34))
+                .addGroup(reklamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel19))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         valasztek.setBackground(new java.awt.Color(255, 234, 234));
@@ -520,8 +551,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel10.setText("Darabszám:");
 
-        jComboBox3.setBackground(new java.awt.Color(255, 204, 204));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+        darabszam.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -531,8 +561,8 @@ public class Pizzarendelo extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addComponent(darabszam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -540,9 +570,17 @@ public class Pizzarendelo extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(darabszam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
+
+        jButton1.setBackground(new java.awt.Color(255, 234, 234));
+        jButton1.setText("Végösszeg");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout hatterLayout = new javax.swing.GroupLayout(hatter);
         hatter.setLayout(hatterLayout);
@@ -553,18 +591,23 @@ public class Pizzarendelo extends javax.swing.JFrame {
                 .addGroup(hatterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(cim, javax.swing.GroupLayout.DEFAULT_SIZE, 974, Short.MAX_VALUE)
                     .addGroup(hatterLayout.createSequentialGroup()
-                        .addGroup(hatterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(valasztek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(hatterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(hatterLayout.createSequentialGroup()
-                                .addComponent(pizzateszta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(hatterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(valasztek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(hatterLayout.createSequentialGroup()
+                                        .addComponent(pizzateszta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(meret, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(meret, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(hatterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(egyebfeltet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(megjegyzes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(fizetesimod, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(hatterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(egyebfeltet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(megjegyzes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(fizetesimod, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(hatterLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(hatterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(reklam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -599,7 +642,8 @@ public class Pizzarendelo extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(hatterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(megse)
-                    .addComponent(megrendeles))
+                    .addComponent(megrendeles)
+                    .addComponent(jButton1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -622,13 +666,13 @@ public class Pizzarendelo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void p32esActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p32esActionPerformed
         
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_p32esActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void p55osActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p55osActionPerformed
         
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    }//GEN-LAST:event_p55osActionPerformed
 
     private void bologneseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bologneseActionPerformed
        
@@ -660,6 +704,25 @@ boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelec
         
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     
+        int darab = (int)darabszam.getValue();
+        int osszeg = 0;
+        int p24 = 1600;
+        int p32 = 2400;
+        int p55 = 3600;
+        
+        if (p24es.isSelected()) {
+        osszeg += p24;
+        }
+        else if (p32es.isSelected()){ 
+        osszeg += p32;
+        }else if (p55os.isSelected()) {
+        osszeg += p55;
+        }
+        JOptionPane.showMessageDialog(null, "A kiválasztott pizza ára: " + (osszeg * darab), "Gratulálunk", 1);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     public static void main(String args[]) {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -678,10 +741,12 @@ boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelec
     private javax.swing.JRadioButton carbonara;
     private javax.swing.JPanel cim;
     private javax.swing.JLabel cimszoveg;
+    private javax.swing.JSpinner darabszam;
     private javax.swing.JPanel egyebfeltet;
     private javax.swing.JPanel fizetesimod;
     private javax.swing.JPanel hatter;
     private javax.swing.JRadioButton hawaii;
+    private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -692,11 +757,15 @@ boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelec
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -709,9 +778,6 @@ boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelec
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JPanel kep;
@@ -719,6 +785,9 @@ boolean nincsPizzaValasztva = Margherita.isSelected() == false && hawaii.isSelec
     private javax.swing.JButton megrendeles;
     private javax.swing.JButton megse;
     private javax.swing.JPanel meret;
+    private javax.swing.JRadioButton p24es;
+    private javax.swing.JRadioButton p32es;
+    private javax.swing.JRadioButton p55os;
     private javax.swing.JPanel pizzateszta;
     private javax.swing.JLabel pizzatesztaszoveg;
     private javax.swing.JPanel reklam;
