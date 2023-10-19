@@ -616,9 +616,21 @@ public class Pizzarendelo extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton9ActionPerformed
 
     private void megrendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_megrendelesActionPerformed
-
-        JOptionPane.showMessageDialog(null, "Sikeres megrendelés!");
-        
+boolean vanPizzaValasztva = cmdPizza.getSelectedIndex() > 0;  
+    String uzenet, cim = "FIGYELEM!";
+    int ikonTipus;
+    if(vanPizzaValasztva){
+            cim += "Sikeres rendelés!";
+            uzenet = "Sikeres megrendelés!:)";
+            ikonTipus = 0;
+            //JOptionPane.showMessageDialog(null, "Nincs nyomtató telepítve!");
+        }else{
+            cim += "Hiányos rendelés!";
+            uzenet = "Nincs Pizzafajta választva";
+            ikonTipus = 2;
+            //JOptionPane.showMessageDialog(null, "Nincs papírméret választva");
+        }
+    JOptionPane.showMessageDialog(null, uzenet, cim, ikonTipus);
     }//GEN-LAST:event_megrendelesActionPerformed
 
     private void megseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_megseActionPerformed
