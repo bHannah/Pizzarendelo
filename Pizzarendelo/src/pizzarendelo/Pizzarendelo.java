@@ -32,12 +32,12 @@ public class Pizzarendelo extends javax.swing.JFrame {
         p55os = new javax.swing.JRadioButton();
         egyebfeltet = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
+        sajt = new javax.swing.JCheckBox();
+        parmezan = new javax.swing.JCheckBox();
+        bacon = new javax.swing.JCheckBox();
+        oliva = new javax.swing.JCheckBox();
+        kukorica = new javax.swing.JCheckBox();
+        jalap = new javax.swing.JCheckBox();
         reklam = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -219,23 +219,23 @@ public class Pizzarendelo extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel2.setText("Egyéb feltét hozzáadása");
 
-        jCheckBox1.setBackground(new java.awt.Color(255, 234, 234));
-        jCheckBox1.setText("Sajt");
+        sajt.setBackground(new java.awt.Color(255, 234, 234));
+        sajt.setText("Sajt");
 
-        jCheckBox2.setBackground(new java.awt.Color(255, 234, 234));
-        jCheckBox2.setText("Parmezán");
+        parmezan.setBackground(new java.awt.Color(255, 234, 234));
+        parmezan.setText("Parmezán");
 
-        jCheckBox3.setBackground(new java.awt.Color(255, 234, 234));
-        jCheckBox3.setText("Bacon");
+        bacon.setBackground(new java.awt.Color(255, 234, 234));
+        bacon.setText("Bacon");
 
-        jCheckBox4.setBackground(new java.awt.Color(255, 234, 234));
-        jCheckBox4.setText("Olivabogyó");
+        oliva.setBackground(new java.awt.Color(255, 234, 234));
+        oliva.setText("Olivabogyó");
 
-        jCheckBox5.setBackground(new java.awt.Color(255, 234, 234));
-        jCheckBox5.setText("Kukorica");
+        kukorica.setBackground(new java.awt.Color(255, 234, 234));
+        kukorica.setText("Kukorica");
 
-        jCheckBox6.setBackground(new java.awt.Color(255, 234, 234));
-        jCheckBox6.setText("Jalapeno");
+        jalap.setBackground(new java.awt.Color(255, 234, 234));
+        jalap.setText("Jalapeno");
 
         javax.swing.GroupLayout egyebfeltetLayout = new javax.swing.GroupLayout(egyebfeltet);
         egyebfeltet.setLayout(egyebfeltetLayout);
@@ -247,14 +247,14 @@ public class Pizzarendelo extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(egyebfeltetLayout.createSequentialGroup()
                         .addGroup(egyebfeltetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jCheckBox3))
+                            .addComponent(sajt)
+                            .addComponent(parmezan)
+                            .addComponent(bacon))
                         .addGap(33, 33, 33)
                         .addGroup(egyebfeltetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox6)
-                            .addComponent(jCheckBox5)
-                            .addComponent(jCheckBox4))))
+                            .addComponent(jalap)
+                            .addComponent(kukorica)
+                            .addComponent(oliva))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         egyebfeltetLayout.setVerticalGroup(
@@ -264,16 +264,16 @@ public class Pizzarendelo extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(egyebfeltetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox4))
+                    .addComponent(sajt)
+                    .addComponent(oliva))
                 .addGap(18, 18, 18)
                 .addGroup(egyebfeltetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox5))
+                    .addComponent(parmezan)
+                    .addComponent(kukorica))
                 .addGap(18, 18, 18)
                 .addGroup(egyebfeltetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox6))
+                    .addComponent(bacon)
+                    .addComponent(jalap))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -371,6 +371,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
         buttonGroup3.add(sonkas);
         sonkas.setText("Sonkás");
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         jLabel13.setText("(paradicsomszósz, paradicsomkarika, mozzarella)");
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
@@ -714,6 +715,12 @@ public class Pizzarendelo extends javax.swing.JFrame {
         int p24 = 1600;
         int p32 = 2400;
         int p55 = 3600;
+        boolean extra1 = sajt.isSelected();
+        boolean extra2 = kukorica.isSelected();
+        boolean extra3 = parmezan.isSelected();
+        boolean extra4 = oliva.isSelected();
+        boolean extra5 = bacon.isSelected();
+        boolean extra6 = jalap.isSelected();
 
         if (Margherita.isSelected() == false && hawaii.isSelected() == false
                 && bolognese.isSelected() == false && carbonara.isSelected() == false && sonkas.isSelected() == false) {
@@ -726,6 +733,26 @@ public class Pizzarendelo extends javax.swing.JFrame {
             osszeg += p55;
         }
         int fizmod = fizetes.getSelectedIndex();
+        
+        if (extra1 == true){
+            osszeg += 150;
+        }
+        if (extra2 == true){
+            osszeg += 150;
+        }
+        if (extra3 == true){
+            osszeg += 150;
+        }
+        if (extra4 == true){
+            osszeg += 150;
+        }
+        if (extra5 == true){
+            osszeg += 150;
+        }
+        if (extra6 == true){
+            osszeg += 150;
+        }
+        
         String fizetes = "";
         String uzenet = "";
         String title ="";
@@ -765,6 +792,7 @@ public class Pizzarendelo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Margherita;
+    private javax.swing.JCheckBox bacon;
     private javax.swing.JRadioButton bolognese;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
@@ -779,12 +807,6 @@ public class Pizzarendelo extends javax.swing.JFrame {
     private javax.swing.JPanel hatter;
     private javax.swing.JRadioButton hawaii;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -811,17 +833,22 @@ public class Pizzarendelo extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JCheckBox jalap;
     private javax.swing.JPanel kep;
+    private javax.swing.JCheckBox kukorica;
     private javax.swing.JPanel megjegyzes;
     private javax.swing.JButton megrendeles;
     private javax.swing.JButton megse;
     private javax.swing.JPanel meret;
+    private javax.swing.JCheckBox oliva;
     private javax.swing.JRadioButton p24es;
     private javax.swing.JRadioButton p32es;
     private javax.swing.JRadioButton p55os;
+    private javax.swing.JCheckBox parmezan;
     private javax.swing.JPanel pizzateszta;
     private javax.swing.JLabel pizzatesztaszoveg;
     private javax.swing.JPanel reklam;
+    private javax.swing.JCheckBox sajt;
     private javax.swing.JRadioButton sonkas;
     private javax.swing.JPanel valasztek;
     // End of variables declaration//GEN-END:variables
